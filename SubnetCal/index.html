@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="/src/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tauri App</title>
+    <script type="module" src="/src/main.ts" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /* Keeping these hover effects for now, even though unused. */
+        .logo.vite:hover {
+            filter: drop-shadow(0 0 2em #747bff);
+        }
+
+        .logo.typescript:hover {
+            filter: drop-shadow(0 0 2em #2d79c7);
+        }
+    </style>
+</head>
+<body>
+<div id="content-container">
+    <form id="ipAddressForm">
+        <ul class="inputList">
+            <li class="configurable-input">
+                <label id="forIpAddress" for="ipAddress">
+                    Netzwerkaddressblock
+                </label>
+                <input type="text" id="ipAddress" required value="10.0.0.0/8"/>
+            </li>
+            <li class="configurable-input">
+                <label id="forSubnetMask" for="subnetMask">
+                    Subnetzmaske
+                </label>
+                <select id="subnetMask" required>
+                    <option value="255.0.0.0">255.0.0.0/8</option>
+                    <option value="255.128.0.0">255.128.0.0/9</option>
+                    <option value="255.192.0.0">255.192.0.0/10</option>
+                    <option value="255.224.0.0">255.224.0.0/11</option>
+                    <option value="255.240.0.0">255.240.0.0/12</option>
+                    <option value="255.248.0.0">255.248.0.0/13</option>
+                    <option value="255.252.0.0">255.252.0.0/14</option>
+                    <option value="255.254.0.0">255.254.0.0/15</option>
+                    <option value="255.255.0.0">255.255.0.0/16</option>
+                    <option value="255.255.128.0">255.255.128.0/17</option>
+                    <option value="255.255.192.0">255.255.192.0/18</option>
+                    <option value="255.255.224.0">255.255.224.0/19</option>
+                    <option value="255.255.240.0">255.255.240.0/20</option>
+                    <option value="255.255.248.0">255.255.248.0/21</option>
+                    <option value="255.255.252.0">255.255.252.0/22</option>
+                    <option value="255.255.254.0">255.255.254.0/23</option>
+                    <option value="255.255.255.0">255.255.255.0/24</option>
+                    <option value="255.255.255.128">255.255.255.128/25</option>
+                    <option value="255.255.255.192">255.255.255.192/26</option>
+                    <option value="255.255.255.224">255.255.255.224/27</option>
+                    <option value="255.255.255.240">255.255.255.240/28</option>
+                    <option value="255.255.255.248">255.255.255.248/29</option>
+                    <option value="255.255.255.252">255.255.255.252/30</option>
+                    <option value="255.255.255.254">255.255.255.254/31</option>
+                    <option value="255.255.255.255">255.255.255.255/32</option>
+                </select>
+            </li>
+            <li class="configurable-input">
+                <label id="forHostSubnetCount" for="hostSubnetCount">
+                    Host-/Subnetzanzahl
+                </label>
+                <select id="hostSubnetCount" required>
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">4</option>
+                    <option value="3">8</option>
+                    <option value="4">16</option>
+                    <option value="5">32</option>
+                    <option value="6">64</option>
+                    <option value="7">128</option>
+                    <option value="8">256</option>
+                    <option value="9">512</option>
+                    <option value="10">1024</option>
+                    <option value="11">2048</option>
+                    <option value="12">4096</option>
+                    <option value="13">8192</option>
+                    <option value="14">16384</option>
+                    <option value="15">32768</option>
+                    <option value="16">65536</option>
+                    <option value="17">131072</option>
+                    <option value="18">262144</option>
+                    <option value="19">524288</option>
+                    <option value="20">1048576</option>
+                    <option value="21">2097152</option>
+                    <option value="22">4194304</option>
+                    <option value="23">8388608</option>
+                    <option value="24">16777216</option>
+                </select>
+            </li>
+            <li class="configurable-input">
+                <label id="forSubnetCount" for="subnetCount">
+                    Subnetzanzahl
+                </label>
+                <select id="subnetCount" required>
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">4</option>
+                    <option value="3">8</option>
+                    <option value="4">16</option>
+                    <option value="5">32</option>
+                    <option value="6">64</option>
+                    <option value="7">128</option>
+                    <option value="8">256</option>
+                    <option value="9">512</option>
+                    <option value="10">1024</option>
+                    <option value="11">2048</option>
+                    <option value="12">4096</option>
+                    <option value="13">8192</option>
+                    <option value="14">16384</option>
+                    <option value="15">32768</option>
+                    <option value="16">65536</option>
+                    <option value="17">131072</option>
+                    <option value="18">262144</option>
+                    <option value="19">524288</option>
+                    <option value="20">1048576</option>
+                    <option value="21">2097152</option>
+                    <option value="22">4194304</option>
+                    <option value="23">8388608</option>
+                    <option value="24">16777216</option>
+                </select>
+            </li>
+        </ul>
+        <ul class="inputList">
+            <li class="configurable-input">
+                <label id="forHostRange" for="hostRange">
+                    Host-Adressbereich
+                </label>
+                <input type="text" id="hostRange" required value="10.0.0.1 - 10.255.255.254" disabled/>
+            </li>
+            <li class="configurable-input">
+                <label id="forBroadcastAddress" for="broadcastAddress">
+                    Broadcast-Adresse
+                </label>
+                <input type="text" id="broadcastAddress" required value="10.255.255.255" disabled/>
+            </li>
+            <li class="configurable-input">
+                <label id="forPlaceholderMask" for="placeholdermask">
+                    Platzhaltermaske
+                </label>
+                <input type="text" id="placeholdermask" required value="0.255.255.255" disabled/>
+            </li>
+            <li class="configurable-input">
+                <label id="forCIDRNotation" for="CidrNotation">
+                    CIDR-Notation
+                </label>
+                <input type="text" id="CidrNotation" required value="10.0.0.0/8" disabled/>
+            </li>
+
+        </ul>
+        <table class="subnetDetails">
+            <thead>
+                <tr class="sticky-header">
+                    <td>
+                        Subnet Id
+                    </td>
+                    <td>
+                        Subnet Address
+                    </td>
+                    <td>
+                        Host Address Range
+                    </td>
+                    <td>
+                        Broadcast Address
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </form>
+</div>
+</body>
+</html>

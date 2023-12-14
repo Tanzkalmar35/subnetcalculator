@@ -1,0 +1,69 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  a:hover {
+    color: #24c8db;
+  }
+
+  input,
+  button {
+    color: #ffffff;
+    background-color: #0f0f0f98;
+  }
+  button:active {
+    background-color: #0f0f0f69;
+  }
+}
+
+.inputList {
+  display: flex;
+  list-style-type: none;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#ipAddressForm {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.configurable-input input, select {
+  width: 20vw;
+  height: 3vh;
+}
+
+.configurable-input {
+  flex: 1;
+}
+
+.configurable-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.subnetDetails {
+  width: 100vw;
+  height: auto;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+td {
+  border: 1px solid #dee2e6;
+  padding: 8px 10px;
+}
+
+thead td {
+  background-color: dimgrey;
+}
